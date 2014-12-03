@@ -51,10 +51,15 @@ pom.xml.versionsBackup
 pom.xml.next
 release.properties
 
+# Eclipse project
+.project
+.classpath
+
 # Eclipse
 *.pydevproject
 .metadata
 .gradle
+.recommenders
 bin/
 tmp/
 *.tmp
