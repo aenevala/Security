@@ -31,7 +31,7 @@ public class SecretECDHPerson {
 	public SecretECDHPerson(String name) throws Exception {
 		this.name = name;
 
-		kpg = KeyPairGenerator.getInstance("ECDH");
+		kpg = KeyPairGenerator.getInstance("EC", "BC");
 		kp = kpg.generateKeyPair();
 		ka = KeyAgreement
 				.getInstance(X9ObjectIdentifiers.dhSinglePass_stdDH_sha1kdf_scheme

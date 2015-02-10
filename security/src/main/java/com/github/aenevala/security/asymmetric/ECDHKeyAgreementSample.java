@@ -18,15 +18,10 @@ public class ECDHKeyAgreementSample {
 		
 		SecretECDHPerson alice = new SecretECDHPerson("Alice");
 		SecretECDHPerson bob = new SecretECDHPerson("Bob");
-		SecretECDHPerson carol = new SecretECDHPerson("Bob");
 		alice.sendMessage(bob, "Hello!");
 		bob.sendMessage(alice, "Bye!");
 		alice.sendMessage(bob, "Hello!");
 		
-		// How alice can trust the message comes from Bob?
-		carol.sendMessage(alice, "Faking Bob");
-		// PKI anyone?
-		// like sendMessage(alice, "Faking Bob", myCert)
 	}
 
 }

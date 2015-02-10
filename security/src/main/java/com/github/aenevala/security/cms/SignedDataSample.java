@@ -4,14 +4,14 @@ package com.github.aenevala.security.cms;
 public class SignedDataSample {
 
 	public static void main(String[] args) throws Exception {
-		SignedPerson alice = new SignedPerson("Alice");
-		SignedPerson bob = new SignedPerson("Bob");
+		CMSPerson alice = new CMSPerson("Alice");
+		CMSPerson bob = new CMSPerson("Bob");
 		bob.trust(alice);
 		
-		alice.send(bob, "Hi Bob!");
+		alice.sendSigned(bob, "Hi Bob!");
 		
-		SignedPerson carol = new SignedPerson("Alice");
-		carol.send(bob, "Greetings from Alice");
+		CMSPerson carol = new CMSPerson("Alice");
+		carol.sendSigned(bob, "Greetings from Alice");
 		
 		
 	}
