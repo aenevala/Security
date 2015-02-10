@@ -16,6 +16,7 @@ import org.bouncycastle.util.encoders.Hex;
  */
 public class SignatureSample {
 	public static void main(String[] args) throws Exception {
+		System.out.println("Text"+new String(new byte[0]));
 		Security.addProvider(new BouncyCastleProvider());
 		KeyPairGenerator kpg = KeyPairGenerator.getInstance("EC", "BC");
 		
